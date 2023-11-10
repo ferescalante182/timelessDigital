@@ -104,7 +104,9 @@
       content="assets/images/favicons/ms-icon-144x144.png"
     />
     <meta name="theme-color" content="#ffffff" />
-    <!--  
+   
+    <link rel="stylesheet" href="ism/css/my-slider.css"/>
+    <script src="ism/js/ism-2.2.min.js"></script> <!--  
     Stylesheets
     =============================================
     
@@ -150,6 +152,9 @@
       href="assets/lib/simple-text-rotator/simpletextrotator.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- Main stylesheet and color file-->
     <link href="assets/css/style.css" rel="stylesheet" />
     <link
@@ -243,14 +248,17 @@
             <ul class="works-grid works-grid-gut works-grid-3 works-hover-d" id="works-grid">
              
               
-              <li class="work-item corporate"><a href="polyline.html">
-                  <div class="work-image"><img src="assets/images/agency/IMG_0008.jpg" alt="Portfolio Item"/></div>
-                  <div class="work-caption font-alt">
-                    <h3 class="work-title">Polyline Studio</h3>
-                    <div class="work-descr">Corporate/Business</div>
-                  </div></a>
-              </li>
-              
+              <li class="work-item corporate">
+                <a href="#" onclick="openModal(event, 'Polyline Studio', 'Corporate/Business')">
+                    <div class="work-image"><img src="assets/images/agency/IMG_0008.jpg" alt="Portfolio Item"/></div>
+                    <div class="work-caption font-alt">
+                        <h3 class="work-title">Polyline Studio</h3>
+                        <div class="work-descr">Corporate/Business</div>
+                    </div>
+                </a>
+            </li>
+            
+            
               
               
             </ul>
@@ -279,6 +287,35 @@
         </div>
       </div>
     </main>
+
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="ism-slider" id="my-slider">
+      <ol>
+        <li>
+          <img src="ism/image/slides/_u/1699608914075_784864.png">
+          <div class="ism-caption ism-caption-0">Streamlined navigation.</div>
+        </li>
+        <li>
+          <img src="ism/image/slides/_u/1699608914099_23229.png">
+          <div class="ism-caption ism-caption-0">Modals make this website very fast.</div>
+        </li>
+        <li>
+          <img src="ism/image/slides/_u/1699608913606_280617.png">
+          <div class="ism-caption ism-caption-0">working contact form.</div>
+        </li>
+      </ol>
+    </div>
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+  </div>
+
+</div>
+
     <!--  
     JavaScripts
     =============================================
