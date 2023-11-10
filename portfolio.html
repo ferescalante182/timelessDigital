@@ -249,19 +249,25 @@
              
               
               <li class="work-item corporate">
-                <a href="polyline.html" target="_blank">
+                <a href="#" onclick="openModal(event, 'Polyline Studio', 'Corporate/Business')">
                     <div class="work-image"><img src="assets/images/agency/IMG_0008.jpg" alt="Portfolio Item"/></div>
                     <div class="work-caption font-alt">
                         <h3 class="work-title">Polyline Studio</h3>
                         <div class="work-descr">Corporate/Business</div>
                     </div>
                 </a>
+              </li>
+
+              <li class="work-item corporate">
+                <a href="#" onclick="openModalbyid(event, 'MEXICAN', 'MxF', 'Corporate/Business')">
+                    <div class="work-image"><img src="assets/sliderimages/mxf/home.png" alt="MEXICAN"/></div>
+                    <div class="work-caption font-alt">
+                        <h3 class="work-title">Mexican Fashion</h3>
+                        <div class="work-descr">Corporate/Business</div>
+                    </div>
+                </a>
             </li>
             
-            
-            
-              
-              
             </ul>
           </div>
         </section>
@@ -289,6 +295,45 @@
       </div>
     </main>
 
+    <!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="ism-slider" id="my-slider">
+      <ol>
+        <li>
+          <img src="assets/sliderimages/polyline/home.png">
+          <div class="ism-caption ism-caption-0">Streamlined navigation.</div>
+        </li>
+        <li>
+          <img src="assets/sliderimages/polyline/about.png">
+          <div class="ism-caption ism-caption-0">Modals make this website very fast.</div>
+        </li>
+        <li>
+          <img src="assets/sliderimages/polyline/contact.png">
+          <div class="ism-caption ism-caption-0">working contact form.</div>
+        </li>
+      </ol>
+    </div>
+    <span class="close">&times;</span>
+    <h2 id="modalTitle"></h2>
+    <p id="modalDescription"></p>
+  </div>
+
+</div>
+
+
+<!-- New Modal with ID 'MEXICAN' -->
+<div id="MEXICAN" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 class="modalTitle">Mexican Fashion</h2>
+    <p class="modalDescription">Corporate/Business</p>
+    <!-- Additional content goes here -->
+    <img src="assets/sliderimages/mxf/home.png">
+  </div>
+</div>
 
     <!--  
     JavaScripts

@@ -915,40 +915,76 @@ $(document).ready(function () {
     }
   });
 });
+// Get the modal
+var modal = document.getElementById("myModal");
 
-// Function to open a specific modal with dynamic content
-function openModal(event, modalId, title, description) {
-  event.preventDefault(); // Prevent default anchor action
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-  // Get the correct modal based on the passed ID
-  var modal = document.getElementById(modalId);
-
-  // Set the title and description if they need to be dynamic
-  if (title && description) {
-    modal.querySelector(".modalTitle").innerHTML = title;
-    modal.querySelector(".modalDescription").innerHTML = description;
-  }
-
-  // Display the modal
+// When the user clicks on the button, open the modal
+function openModal(event, title, description) {
+  event.preventDefault(); // This will prevent the default anchor action
+  document.getElementById("modalTitle").innerHTML = title;
+  document.getElementById("modalDescription").innerHTML = description;
   modal.style.display = "block";
 }
 
-// Function to close a modal
-function closeModal(modalId) {
-  var modal = document.getElementById(modalId);
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
-// Event listener for close buttons
-document.querySelectorAll(".close").forEach((span) => {
-  span.onclick = function () {
-    this.closest(".modal").style.display = "none";
-  };
-});
-
-// Event listener to close the modal if the user clicks outside of it
+// Close the modal if the user clicks anywhere outside of it
 window.onclick = function (event) {
-  if (event.target.classList.contains("modal")) {
-    event.target.style.display = "none";
+  if (event.target == modal) {
+    modal.style.display = "none";
   }
 };
+
+function open(event) {
+  // Prevent the default anchor action
+  event.preventDefault();
+
+  // Get the modal
+  var modal = document.getElementById("mxf");
+
+  // Open the modal
+  modal.style.display = "block";
+
+  // Get the <span> element that closes the modal
+  var span = modal.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function () {
+    modal.style.display = "none";
+  };
+
+  // Close the modal if the user clicks anywhere outside of it
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  };
+}
+
+// Call this function when the page loads or when the modal is initialized
+openNewItemModal();
+
+function openModalbyid(event, modalId, imgId, category) {
+  event.preventDefault(); // Prevents the default action of the anchor tag
+
+  var modal = document.getElementById(modalId);
+  if (modal) {
+    // Open the modal
+    modal.style.display = "block";
+
+    // Add click event listener to close the modal if clicked outside
+    window.addEventListener("click", function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    });
+  } else {
+    console.error('Modal with ID "' + modalId + '" not found.');
+  }
+}
