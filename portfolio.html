@@ -106,7 +106,8 @@
     <meta name="theme-color" content="#ffffff" />
    
     <link rel="stylesheet" href="ism/css/my-slider.css"/>
-    <script src="ism/js/ism-2.2.min.js"></script> <!--  
+    <script src="ism/js/ism-2.2.min.js"></script> 
+    <!--  
     Stylesheets
     =============================================
     
@@ -227,46 +228,49 @@
           </div>
         </section>
   
-      <!--features-->
-
-      <div class="main">
-        <section class="module">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <ul class="filter font-alt" id="filters">
-                  <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".ecommerce" data-wow-delay="0.2s">E-commerce</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".portfolio" data-wow-delay="0.4s">Portfolio</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".blog" data-wow-delay="0.6s">Informational/Blog</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".corporate" data-wow-delay="0.8s">Corporate/Business</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".non-profit" data-wow-delay="0.10s">Non-Profit</a></li>
-
-                </ul>
-              </div>
-            </div>
-            <ul class="works-grid works-grid-masonry works-hover-w works-grid-3" id="works-grid">
-             
-              
-              <li class="work-item corporate">
-                <a href="#" onclick="openModal(event, 'Polyline Studio', 'Corporate/Business')">
-                    <div class="work-image"><img src="assets/images/agency/IMG_0008.jpg" alt="Portfolio Item"/></div>
-                    <div class="work-caption font-alt">
-                        <h3 class="work-title">Polyline Studio</h3>
-                        <div class="work-descr">Corporate/Business</div>
-                    </div>
-                </a>
-             </li>
-
-            
-            
-            
-              
-              
-            </ul>
-          </div>
-        </section>
+    <!--features-->
+<div class="main">
+  <section class="module">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <ul class="filter font-alt" id="filters">
+            <!-- ... filter options ... -->
+          </ul>
+        </div>
+      </div>
+      <ul class="works-grid works-grid-masonry works-hover-w works-grid-3" id="works-grid">
+        
+       <!-- Work Item 1: Polyline Studio -->
+<li class="work-item corporate">
+  <a href="#" onclick="openModal(event, 'polylineModal', 'Polyline Studio', 'Corporate/Business')">
+    <div class="work-image"><img src="assets/images/agency/IMG_0008.jpg" alt="Polyline Studio"/></div>
+    <div class="work-caption font-alt">
+        <h3 class="work-title">Polyline Studio</h3>
+        <div class="work-descr">Corporate/Business</div>
     </div>
+  </a>
+</li>
+
+<!-- Work Item 2: MXF Project -->
+<li class="work-item ecommerce">
+  <a href="#" onclick="openModal(event, 'mxfModal', 'MXF Project', 'E-commerce')">
+    <div class="work-image"><img src="assets/sliderimages/mxf/home.png" alt="MXF Project"/></div>
+    <div class="work-caption font-alt">
+        <h3 class="work-title">MXF Project</h3>
+        <div class="work-descr">E-commerce</div>
+    </div>
+  </a>
+</li>
+
+
+        <!-- ... other work items ... -->
+
+      </ul>
+    </div>
+  </section>
+</div>
+
      
         <hr class="divider-d" />
         <footer class="footer bg-dark">
@@ -290,32 +294,41 @@
       </div>
     </main>
 
-    <!-- The Modal -->
-<div id="myModal" class="modal">
-
-  <!-- Modal content -->
+ 
+<!-- Modal for Polyline Studio -->
+<div id="polylineModal" class="modal">
   <div class="modal-content">
+    <span class="close">&times;</span>
+    <h2 class="modalTitle">Polyline Studio</h2>
+    <p class="modalDescription">Corporate/Business</p>
+    <!-- Insert a slider or image display here if needed -->
     <div class="ism-slider" id="my-slider">
       <ol>
         <li>
           <img src="assets/sliderimages/polyline/home.png">
-          <div class="ism-caption ism-caption-0">Streamlined navigation.</div>
+          <div class="ism-caption ism-caption-0">My slide caption text</div>
         </li>
         <li>
           <img src="assets/sliderimages/polyline/about.png">
-          <div class="ism-caption ism-caption-0">Modals make this website very fast.</div>
+          <div class="ism-caption ism-caption-0">My slide caption text</div>
         </li>
         <li>
           <img src="assets/sliderimages/polyline/contact.png">
-          <div class="ism-caption ism-caption-0">working contact form.</div>
+          <div class="ism-caption ism-caption-0">My slide caption text</div>
         </li>
       </ol>
-    </div>
+    </div>  </div>
+</div>
+<!-- Modal for MXF Project -->
+<div id="mxfModal" class="modal">
+  <div class="modal-content">
     <span class="close">&times;</span>
-    <h2 id="modalTitle"></h2>
-    <p id="modalDescription"></p>
+    <h2 class="modalTitle">MXF Project</h2>
+    <p class="modalDescription">E-commerce</p>
+    <!-- Insert a slider or image display here if needed -->
+    <img src="assets/sliderimages/mxf/home.png">
+    
   </div>
-
 </div>
 
     <!--  
