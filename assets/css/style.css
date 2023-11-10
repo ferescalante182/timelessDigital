@@ -8866,3 +8866,16 @@ img {
   text-decoration: none;
   cursor: pointer;
 }
+.modal .modal-content .image-container {
+  display: flex; /* Enable flexbox */
+  justify-content: center; /* Center images horizontally */
+  align-items: center; /* Center images vertically */
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  gap: 10px; /* Space between images */
+}
+
+.modal .modal-content .image-container img {
+  max-width: 760px; /* Control the maximum width of images */
+  height: auto; /* Maintain aspect ratio */
+  flex: 0 0 auto; /* Do not grow, do not shrink, and don't base size on content */
+}
