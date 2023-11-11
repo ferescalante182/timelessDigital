@@ -8799,25 +8799,13 @@ button:focus,
   justify-content: center; /* Centers flex items horizontally */
   /* Add other styles like height or padding if necessary to achieve the desired look */
 }
-/* Basic global image styling */
+/* Global image styling */
 img {
   max-width: 100%;
   height: auto;
 }
 
-/* Responsive adjustments for side images on smaller screens */
-@media only screen {
-  .side-image img {
-    width: 50%; /* Decide on either 50% or 100% based on your design */
-    margin-top: 0; /* Adjust the margin-top as needed for mobile */
-  }
-
-  .side-image-text {
-    padding: 0 15px;
-  }
-}
-
-/* Styling for the modal */
+/* Modal styling */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
@@ -8833,7 +8821,7 @@ img {
   padding-top: 60px;
 }
 
-/* Modal Content/Box */
+/* Modal content styling */
 .modal-content {
   background-color: #fefefe;
   margin: 5% auto; /* 5% from the top and centered */
@@ -8845,32 +8833,16 @@ img {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* Styling for images within the modal */
+/* Responsive image styles within the modal */
 .modal .modal-content .image-container img {
-  max-width: 20%; /* Responsive image width */
+  max-width: 100%; /* Limit image width to 100% of its container */
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Adjustments for smaller screens */
-@media (max-width: 20%) {
-  .image-container img {
-    width: 10%; /* Shrink to 80% of the container width on mobile devices */
-    display: block; /* Use block to center image if needed */
-    margin: 0 auto; /* Auto margins to center image horizontally */
+/* Additional media query for smaller screens */
+@media only screen and (max-width: 375px) {
+  .modal .modal-content .image-container img {
+    max-width: 95%; /* Adjust for extra small screens */
+    margin: 0 auto; /* Center the image */
   }
 }
