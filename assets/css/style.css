@@ -8937,6 +8937,6 @@ img {
 
   /* Add padding inside the modal-content to ensure content doesn't touch the edges */
   .modal-content {
-    padding: 20px; /* or any other value that fits your design */
+    padding: 50px; /* or any other value that fits your design */
   }
 }
