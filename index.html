@@ -277,62 +277,69 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
           </div>
         </section>
         
-        <section class="module pb-0" id="works">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">My Work</h2>
-                <div class="module-subtitle font-serif"></div>
-              </div>
-            </div>
+<!-- Section: My Work -->
+<section class="module pb-0" id="works">
+  <div class="container">
+    <!-- Title -->
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <h2 class="module-title font-alt">My Work</h2>
+        <div class="module-subtitle font-serif"></div>
+      </div>
+    </div>
+
+    <!-- Filters -->
+    <div class="row">
+      <div class="col-sm-12">
+        <ul class="filter font-alt" id="filters">
+          <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
+          <li><a class="wow fadeInUp" href="#" data-filter=".ecommerce" data-wow-delay="0.2s">E-commerce</a></li>
+          <li><a class="wow fadeInUp" href="#" data-filter=".portfolio" data-wow-delay="0.4s">Portfolio</a></li>
+          <li><a class="wow fadeInUp" href="#" data-filter=".blog" data-wow-delay="0.6s">Informational/Blog</a></li>
+          <li><a class="wow fadeInUp" href="#" data-filter=".corporate" data-wow-delay="0.8s">Corporate/Business</a></li>
+          <li><a class="wow fadeInUp" href="#" data-filter=".non-profit" data-wow-delay="0.10s">Non-Profit</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Work Grid -->
+    <ul class="works-grid works-grid-gut works-grid-3 works-hover-d" id="works-grid">
+      <!-- Work Item: Polyline Studio -->
+      <li class="work-item corporate">
+        <a href="#" onclick="openModal(event, 'Polyline Studio', 'Corporate/Business')">
+          <div class="work-image"><img src="assets/homepoly.png" alt="Portfolio Item"/></div>
+          <div class="work-caption font-alt">
+            <h3 class="work-title">Polyline Studio</h3>
+            <div class="work-descr">Corporate/Business</div>
           </div>
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-12">
-                <ul class="filter font-alt" id="filters">
-                  <li><a class="current wow fadeInUp" href="#" data-filter="*">All</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".ecommerce" data-wow-delay="0.2s">E-commerce</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".portfolio" data-wow-delay="0.4s">Portfolio</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".blog" data-wow-delay="0.6s">Informational/Blog</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".corporate" data-wow-delay="0.8s">Corporate/Business</a></li>
-                  <li><a class="wow fadeInUp" href="#" data-filter=".non-profit" data-wow-delay="0.10s">Non-Profit</a></li>
+        </a>
+      </li>
 
-                </ul>
-              </div>
-            </div>
-            <ul class="works-grid works-grid-gut works-grid-3 works-hover-d" id="works-grid">
-             
-              
-              <li class="work-item corporate">
-                <a href="#" onclick="openModal(event, 'Polyline Studio', 'Corporate/Business')">
-                    <div class="work-image"><img src="assets/homepoly.png" alt="Portfolio Item"/></div>
-                    <div class="work-caption font-alt">
-                        <h3 class="work-title">Polyline Studio</h3>
-                        <div class="work-descr">Corporate/Business</div>
-                    </div>
-                </a>
-              </li>
+      <!-- Work Item: Mexican Fashion -->
+      <li class="work-item ecommerce">
+        <a href="#" onclick="openModalbyid(event, 'MEXICAN', 'MxF', 'E-commerce')">
+          <div class="work-image"><img src="assets/homemxf.png" alt="MEXICAN"/></div>
+          <div class="work-caption font-alt">
+            <h3 class="work-title">Mexican Fashion</h3>
+            <div class="work-descr">E-commerce</div>
+          </div>
+        </a>
+      </li>
 
-              <li class="work-item ecommerce">
-                <a href="#" onclick="openModalbyid(event, 'MEXICAN', 'MxF', 'E-commerce')">
-                    <div class="work-image"><img src="assets/homemxf.png" alt="MEXICAN"/></div>
-                    <div class="work-caption font-alt">
-                        <h3 class="work-title">Mexican Fashion</h3>
-                        <div class="work-descr">E-commerce</div>
-                    </div>
-                </a>
-            </li>
-
-            <li class="work-item corporate">
-              <a href="#" onclick="openModalbyid(event, 'border', 'Architecture firm', 'Corporate/business')">
-                  <div class="work-image"><img src="assets/bordermain.png" alt="border"/></div>
-                  <div class="work-caption font-alt">
-                      <h3 class="work-title">Border Arquitectos</h3>
-                      <div class="work-descr">Corporate/Business</div>
-                  </div>
-              </a>
-          </li>
-
+      <!-- Work Item: Border Arquitectos -->
+      <li class="work-item corporate">
+        <a href="#" onclick="openModalbyid(event, 'border', 'Architecture firm', 'Corporate/business')">
+          <div class="work-image"><img src="assets/bordermain.png" alt="border"/></div>
+          <div class="work-caption font-alt">
+            <h3 class="work-title">Border Arquitectos</h3>
+            <div class="work-descr">Corporate/Business</div>
+          </div>
+        </a>
+      </li>
+      <!-- Additional work items can be added here -->
+    </ul>
+  </div>
+</section>
 
 
 
@@ -390,7 +397,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
         <div class="container">
           <div class="row multi-columns-row">
             <!-- Gallery Items -->
-            <div class="col-sm-6 col-md-3 col-lg-3">
+            <div class="col-1">
               <div class="gallery-item">
                 <div class="gallery-image">
                   <a class="gallery" href="assets/border1.png" title="Title 1">
@@ -402,7 +409,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
+            <div class="col-1">
               <div class="gallery-item">
                 <div class="gallery-image">
                   <a class="gallery" href="assets/border2.png" title="Title 2">
@@ -414,7 +421,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
                 </div>
               </div>
             </div>
-            <div class="col-sm-6 col-md-3 col-lg-3">
+            <div class="col-1">
               <div class="gallery-item">
                 <div class="gallery-image">
                   <a class="gallery" href="assets/borderteam.png" title="Title 3">
@@ -438,9 +445,7 @@ cookieconsent.run({"notice_banner_type":"simple","consent_type":"express","palet
               
               
               
-            </ul>
-          </div>
-        </section>
+           
         <section class="module-small bg-dark">
           <div class="container">
             <div class="row">
