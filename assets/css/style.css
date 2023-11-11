@@ -8910,3 +8910,19 @@ img {
   max-width: 100%; /* Responsive image width */
   height: auto; /* Maintain aspect ratio */
 }
+
+/* CSS styles that apply to all devices */
+.image-container img {
+  width: 100%; /* Full width on larger screens */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* CSS media query for mobile devices */
+@media (max-width: 768px) {
+  /* Adjust the max-width as needed for your breakpoint */
+  .image-container img {
+    width: 80%; /* Shrink to 80% of the container width on mobile devices */
+    display: block; /* Optional: Use block to center image if needed */
+    margin: 0 auto; /* Optional: Use auto margins to center image horizontally */
+  }
+}
