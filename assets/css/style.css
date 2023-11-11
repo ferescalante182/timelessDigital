@@ -8906,3 +8906,6 @@ img {
 }
 
 /*new stuff*/
+.modal .module .container {
+  padding-left: 20px; /* Adjust the value as needed */
+}
