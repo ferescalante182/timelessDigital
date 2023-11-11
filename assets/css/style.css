@@ -8820,7 +8820,7 @@ img {
 @media only screen and (max-width: 768px) {
   /* On small screens, ensure the image takes full width */
   .side-image img {
-    width: 100%;
+    width: 50%;
     margin-top: 0; /* Adjust the margin-top as needed for mobile */
   }
   /* Optional: Adjust text size or padding on mobile as needed */
@@ -8880,5 +8880,4 @@ img {
   flex: 0 0 auto; /* Do not grow, do not shrink, and don't base size on content */
 }
 
-/*  new stff
-
+/*  new stff */
