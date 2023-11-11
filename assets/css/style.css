@@ -8799,47 +8799,37 @@ button:focus,
   justify-content: center; /* Centers flex items horizontally */
   /* Add other styles like height or padding if necessary to achieve the desired look */
 }
-
+/* Basic global image styling */
 img {
   max-width: 100%;
   height: auto;
 }
 
+/* Responsive adjustments for side images on smaller screens */
 @media only screen and (max-width: 768px) {
   .side-image img {
-    max-width: 100%;
-    height: auto;
-  }
-}
-
-.img-responsive {
-  max-width: 100%;
-  height: auto;
-}
-
-@media only screen and (max-width: 768px) {
-  /* On small screens, ensure the image takes full width */
-  .side-image img {
-    width: 50%;
+    width: 50%; /* Decide on either 50% or 100% based on your design */
     margin-top: 0; /* Adjust the margin-top as needed for mobile */
   }
-  /* Optional: Adjust text size or padding on mobile as needed */
+
   .side-image-text {
     padding: 0 15px;
   }
 }
 
+/* Styling for the modal */
 .modal {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  align-items: center; /* Aligns modal vertically */
+  justify-content: center; /* Aligns modal horizontally */
+  z-index: 1000; /* Ensures the modal is above other content */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   padding-top: 60px;
 }
 
@@ -8849,7 +8839,10 @@ img {
   margin: 5% auto; /* 5% from the top and centered */
   padding: 20px;
   border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  width: 80%; /* Adjust based on screen size */
+  max-width: 600px; /* Maximum width of the modal content */
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 }
 
 /* The Close Button */
@@ -8866,63 +8859,18 @@ img {
   text-decoration: none;
   cursor: pointer;
 }
-.modal .modal-content .image-container {
-  display: flex; /* Enable flexbox */
-  justify-content: center; /* Center images horizontally */
-  align-items: center; /* Center images vertically */
-  flex-wrap: wrap; /* Allow images to wrap to the next line */
-  gap: 10px; /* Space between images */
-}
 
+/* Styling for images within the modal */
 .modal .modal-content .image-container img {
-  max-width: 760px; /* Control the maximum width of images */
-  height: auto; /* Maintain aspect ratio */
-  flex: 0 0 auto; /* Do not grow, do not shrink, and don't base size on content */
-}
-
-/*  new stff */
-/* Basic styling for the modal background */
-.modal {
-  position: fixed; /* Fixed position relative to the viewport */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
-  display: flex;
-  align-items: center; /* Aligns modal vertically */
-  justify-content: center; /* Aligns modal horizontally */
-  z-index: 1000; /* Ensures the modal is above other content */
-}
-
-/* Styling for the modal content */
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  max-width: 600px; /* Maximum width of the modal content */
-  width: 90%; /* Responsive width */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
-}
-
-/* Responsive image styling */
-.image-container img {
   max-width: 100%; /* Responsive image width */
   height: auto; /* Maintain aspect ratio */
 }
 
-/* CSS styles that apply to all devices */
-.image-container img {
-  width: 100%; /* Full width on larger screens */
-  height: auto; /* Maintain aspect ratio */
-}
-
-/* CSS media query for mobile devices */
+/* Adjustments for smaller screens */
 @media (max-width: 768px) {
-  /* Adjust the max-width as needed for your breakpoint */
   .image-container img {
     width: 80%; /* Shrink to 80% of the container width on mobile devices */
-    display: block; /* Optional: Use block to center image if needed */
-    margin: 0 auto; /* Optional: Use auto margins to center image horizontally */
+    display: block; /* Use block to center image if needed */
+    margin: 0 auto; /* Auto margins to center image horizontally */
   }
 }
