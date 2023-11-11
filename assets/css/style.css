@@ -8880,31 +8880,57 @@ img {
   flex: 0 0 auto; /* Do not grow, do not shrink, and don't base size on content */
 }
 
+/* Root font-size for reference */
+html {
+  font-size: 16px; /* Default browser font-size; adjust as needed */
+}
+
 /* Style for the modal */
 .modal-content {
-  /* Your existing styles */
+  /* Your existing styles or additional styles */
 }
 
 /* Flex container for images */
 .image-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /* Container for the top two images */
 .top-images {
   display: flex;
-  justify-content: space-around; /* Adjust as needed */
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .top-images img {
-  width: 48%; /* Adjust as needed */
+  width: calc(
+    50% - 1rem
+  ); /* Adjust the width as needed, subtracting the margin */
   height: auto;
+  max-width: 18.75rem; /* Equivalent to 300px if font-size is 16px */
+  min-width: 9.375rem; /* Equivalent to 150px if font-size is 16px */
+  margin: 0.5rem; /* Space between images */
 }
 
 /* Style for the bottom larger image */
 .bottom-image {
-  width: 100%; /* Adjust as needed */
+  width: 100%; /* Full width of its container */
   height: auto;
-  margin-top: 20px; /* Space between the top and bottom images */
+  margin-top: 1.25rem; /* Space between the top and bottom images */
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 37.5rem) {
+  /* Equivalent to 600px if font-size is 16px */
+  .top-images {
+    flex-direction: column;
+  }
+
+  .top-images img {
+    width: 100%;
+    margin: 0.5rem 0; /* Adjust margin for vertical stacking */
+  }
 }
