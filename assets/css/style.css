@@ -8877,13 +8877,13 @@ img {
 
 /* Gallery Item Styling */
 .gallery-item {
-  max-width: 100%; /* Adjust as necessary to fit within the modal */
+  max-width: 45%; /* Adjust as necessary to fit within the modal */
   height: auto; /* Maintain aspect ratio */
 }
 
 /* Responsive Image Styling */
 .image-container img {
-  max-width: 100%;
+  max-width: 450%;
   height: auto;
 }
 
@@ -8908,4 +8908,35 @@ img {
 /*new stuff*/
 .modal .module .container {
   padding-left: 20px; /* Adjust the value as needed */
+}
+.gallery-image img {
+  max-width: 10%;
+  height: auto;
+}
+
+/* Media query for desktop screens */
+@media screen and (min-width: 1024px) {
+  .gallery-image img {
+    max-width: 7%; /* Adjust this value as needed */
+    height: auto; /* Maintain aspect ratio */
+  }
+}
+/* Media query for desktop screens */
+@media screen and (min-width: 1024px) {
+  .gallery-image img {
+    max-width: 1px; /* Adjust this to a smaller percentage if necessary */
+    height: auto;
+  }
+
+  /* Ensure that the gallery items are centered and do not exceed the width of their container */
+  .gallery-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Add padding inside the modal-content to ensure content doesn't touch the edges */
+  .modal-content {
+    padding: 20px; /* or any other value that fits your design */
+  }
 }
