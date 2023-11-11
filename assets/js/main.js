@@ -941,36 +941,10 @@ window.onclick = function (event) {
   }
 };
 
-function open(event) {
-  // Prevent the default anchor action
-  event.preventDefault();
-
-  // Get the modal
-  var modal = document.getElementById("mxf");
-
-  // Open the modal
-  modal.style.display = "block";
-
-  // Get the <span> element that closes the modal
-  var span = modal.getElementsByClassName("close")[0];
-
-  // When the user clicks on <span> (x), close the modal
-  span.onclick = function () {
-    modal.style.display = "none";
-  };
-
-  // Close the modal if the user clicks anywhere outside of it
-  window.onclick = function (event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  };
-}
-
 // Call this function when the page loads or when the modal is initialized
 openNewItemModal();
 
-function openModalbyid(event, modalId, imgId, category) {
+function openModalbyid(event, modalId) {
   event.preventDefault(); // Prevents the default action of the anchor tag
 
   var modal = document.getElementById(modalId);
@@ -988,3 +962,25 @@ function openModalbyid(event, modalId, imgId, category) {
     console.error('Modal with ID "' + modalId + '" not found.');
   }
 }
+
+// Get the modal with the ID 'border'
+var modal = document.getElementById("border");
+
+// Function to close the modal
+function closeModal() {
+  modal.style.display = "none";
+}
+
+// Event listener for closing the modal when clicking outside of the modal content
+window.onclick = function (event) {
+  if (event.target == modal) {
+    closeModal();
+  }
+};
+
+// Optional: Close modal with Escape key
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closeModal();
+  }
+});
