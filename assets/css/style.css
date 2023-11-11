@@ -8806,7 +8806,7 @@ img {
 }
 
 /* Responsive adjustments for side images on smaller screens */
-@media only screen and (max-width: 768px) {
+@media only screen {
   .side-image img {
     width: 50%; /* Decide on either 50% or 100% based on your design */
     margin-top: 0; /* Adjust the margin-top as needed for mobile */
