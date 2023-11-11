@@ -8882,3 +8882,19 @@ img {
 
 /*  new stff
 
+/* Style for the image container */
+.image-container {
+  text-align: center; /* Center-aligns the images */
+}
+
+.top-images img {
+  display: block; /* Makes each image a block element */
+  margin: auto; /* Centers each image */
+  padding-bottom: 10px; /* Adds space between the images in the top-images div */
+}
+
+.bottom-image {
+  display: block;
+  margin: auto;
+  padding-top: 20px; /* Adds space between the top-images and bottom-image */
+}
