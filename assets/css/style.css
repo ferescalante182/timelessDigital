@@ -8879,3 +8879,32 @@ img {
   height: auto; /* Maintain aspect ratio */
   flex: 0 0 auto; /* Do not grow, do not shrink, and don't base size on content */
 }
+
+/* Style for the modal */
+.modal-content {
+  /* Your existing styles */
+}
+
+/* Flex container for images */
+.image-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Container for the top two images */
+.top-images {
+  display: flex;
+  justify-content: space-around; /* Adjust as needed */
+}
+
+.top-images img {
+  width: 48%; /* Adjust as needed */
+  height: auto;
+}
+
+/* Style for the bottom larger image */
+.bottom-image {
+  width: 100%; /* Adjust as needed */
+  height: auto;
+  margin-top: 20px; /* Space between the top and bottom images */
+}
