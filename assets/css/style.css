@@ -8846,6 +8846,64 @@ img {
     margin: 0 auto; /* Center the image */
   }
 }
+/* Basic Modal Styling */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  overflow: auto;
+  padding-top: 60px;
+}
+
+/* Modal Content Styling */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow-y: auto; /* Enable vertical scrolling if content is too long */
+}
+
+/* Gallery Item Styling */
+.gallery-item {
+  max-width: 100%; /* Adjust as necessary to fit within the modal */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Responsive Image Styling */
+.image-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Responsive adjustments for smaller screens */
+@media only screen and (max-width: 768px) {
+  .modal-content {
+    width: 90%; /* Increase width on smaller screens if needed */
+  }
+
+  .gallery-item {
+    max-width: 100%; /* Adjust as necessary for smaller screens */
+  }
+}
+
+/* Further adjustments for very small devices like iPhones */
+@media only screen and (max-width: 375px) {
+  .gallery-item {
+    max-width: 95%; /* Reduce size to ensure no overflow */
+  }
+}
 
 /*--------------------------------------------------------------
     Common
