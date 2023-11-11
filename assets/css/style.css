@@ -8882,12 +8882,14 @@ img {
 
 /* Root font-size for reference */
 html {
-  font-size: 16px; /* Default browser font-size; adjust as needed */
+  font-size: 16px; /* Adjust this based on your design preference */
 }
 
 /* Style for the modal */
 .modal-content {
-  /* Your existing styles or additional styles */
+  padding: 1rem; /* Adds padding to prevent content from touching the edges */
+  max-width: 100%; /* Ensures the modal doesn't exceed the viewport width */
+  box-sizing: border-box; /* Includes padding and border in the width calculation */
 }
 
 /* Flex container for images */
@@ -8906,31 +8908,29 @@ html {
 }
 
 .top-images img {
-  width: calc(
-    50% - 1rem
-  ); /* Adjust the width as needed, subtracting the margin */
+  width: calc(50% - 1rem); /* Half of container width minus margin */
   height: auto;
-  max-width: 18.75rem; /* Equivalent to 300px if font-size is 16px */
-  min-width: 9.375rem; /* Equivalent to 150px if font-size is 16px */
+  max-width: 18.75rem; /* Limits the maximum width */
+  min-width: 9.375rem; /* Minimum width */
   margin: 0.5rem; /* Space between images */
 }
 
 /* Style for the bottom larger image */
 .bottom-image {
-  width: 100%; /* Full width of its container */
+  width: 100%; /* Adapts to the width of its container */
   height: auto;
-  margin-top: 1.25rem; /* Space between the top and bottom images */
+  margin-top: 1.25rem; /* Space between images */
 }
 
 /* Media Queries for responsiveness */
 @media (max-width: 37.5rem) {
-  /* Equivalent to 600px if font-size is 16px */
+  /* Adjusts for smaller screens */
   .top-images {
     flex-direction: column;
   }
 
   .top-images img {
     width: 100%;
-    margin: 0.5rem 0; /* Adjust margin for vertical stacking */
+    margin: 0.5rem 0; /* Adjusts margin for stacked layout */
   }
 }
