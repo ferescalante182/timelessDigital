@@ -8882,33 +8882,3 @@ img {
 
 /*  new stff
 
-/* Style for the image container */
-.image-container {
-  text-align: center; /* Center-aligns the images */
-}
-
-.top-images img {
-  display: block; /* Makes each image a block element */
-  margin: auto; /* Centers each image */
-  padding-bottom: 10px; /* Adds space between the images in the top-images div */
-}
-
-.bottom-image {
-  display: block;
-  margin: auto;
-  padding-top: 20px; /* Adds space between the top-images and bottom-image */
-}
-/* Style for the modal content */
-.modal-content {
-  overflow: hidden; /* Prevents content from overflowing */
-  max-width: 100%; /* Ensures the modal content doesn't exceed the modal size */
-  max-height: 100%; /* Optional, depending on your modal design */
-}
-
-/* Style for the images */
-.modal-content img {
-  max-width: 100%; /* Ensures images don't exceed the container's width */
-  height: auto; /* Maintains the aspect ratio of the images */
-  display: block; /* Removes default image inline spacing */
-  margin: auto; /* Centers the image in the container */
-}
