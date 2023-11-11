@@ -8862,14 +8862,14 @@ img {
 
 /* Styling for images within the modal */
 .modal .modal-content .image-container img {
-  max-width: 100%; /* Responsive image width */
+  max-width: 20%; /* Responsive image width */
   height: auto; /* Maintain aspect ratio */
 }
 
 /* Adjustments for smaller screens */
-@media (max-width: 768px) {
+@media (max-width: 20%) {
   .image-container img {
-    width: 80%; /* Shrink to 80% of the container width on mobile devices */
+    width: 10%; /* Shrink to 80% of the container width on mobile devices */
     display: block; /* Use block to center image if needed */
     margin: 0 auto; /* Auto margins to center image horizontally */
   }
