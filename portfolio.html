@@ -256,7 +256,7 @@
     </div>
 
     <!-- Work Grid -->
-    <ul class="works-grid works-grid-gut works-grid-3 works-hover-d" id="works-grid">
+    <ul class="works-grid works-grid-masonry works-hover-w works-grid-3" id="works-grid">
       <!-- Work Item: Polyline Studio -->
       <li class="work-item corporate">
         <a href="#" onclick="openModal(event, 'Polyline Studio', 'Corporate/Business')">
@@ -285,7 +285,7 @@
       <!-- Work Item: Border Arquitectos -->
       <li class="work-item corporate">
         <a href="#" onclick="openModalbyid(event, 'border', 'Architecture firm', 'Corporate/business')">
-          <div class="work-image"><img src="assets/bordernew1.png" alt="border"/></div>
+          <div class="work-image"><img src="assets/borderSliderImages/bordernew2.png" alt="border"/></div>
           <div class="work-caption font-alt">
             <h3 class="work-title">Border Arquitectos</h3>
             <div class="work-descr">Corporate/Businesss</div>
@@ -294,6 +294,22 @@
           </div>
         </a>
       </li>
+
+       <!-- Trigger for Timeless Digital Modal -->
+<li class="work-item corporate">
+  <a href="#" onclick="openModalbyid(event, 'modal-timeless', 'web design agency', 'Corporate/business')">
+    <div class="work-image">
+      <img src="assets/timelessportfolioimage.png" alt="Timeless Digital"/>
+    </div>
+    <div class="work-caption font-alt">
+      <h3 class="work-title">Timeless Digital</h3>
+      <div class="work-descr">Corporate/Business</div>
+      <h2>Completed.</h2>
+    </div>
+  </a>
+</li>
+
+      
       <!-- Additional work items can be added here -->
     </ul>
   </div>
@@ -305,7 +321,7 @@
           <!--modals-->
 
 
- <!-- The Modal -->
+ <!-- The Modal polyline -->
 <div id="myModal" class="modal">
   <div class="modal-content">
     <div class="ism-slider" id="my-slider">
@@ -369,56 +385,49 @@
     <!-- Description with certain parts in bold -->
     <p class="modalDescription"><strong>Corporate/Business</strong></p>
     <p><strong>Location:</strong> Tijuana</p>
-    <p><strong>Border Arquitectos:</strong> Architecture studio based in the city of Tijuana, Mexico. With architechts from reconized international schools, this project needed a new website to set them appart from the competition.</p>
+    <p><strong>Border Arquitectos</strong>Architecture studio based in the city of Tijuana, Mexico. With architechts from reconized international schools, this project needed a new website to set them appart from the competition.</p>
     <p><strong>Website:</strong> <a href="http://www.borderarquitectos.com" target="_blank">www.borderarquitectos.com</a></p>
-    <div class="image-container">
-      <section class="module">
-        <div class="container">
-          <div class="row multi-columns-row">
-            <!-- Gallery Items -->
-            <div class="col-1">
-              <div class="gallery-item">
-                <div class="gallery-image">
-                  <a class="gallery" href="assets/bordernew5.png" title="Title 1">
-                    <img src="assets/bordernew5.png" alt="Gallery Image 1"/>
-                    <div class="gallery-caption">
-                      <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-1">
-              <div class="gallery-item">
-                <div class="gallery-image">
-                  <a class="gallery" href="assets/bordernew2.png" title="Title 2">
-                    <img src="assets/bordernew2.png" alt="Gallery Image 2"/>
-                    <div class="gallery-caption">
-                      <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="col-1">
-              <div class="gallery-item">
-                <div class="gallery-image">
-                  <a class="gallery" href="assets/bordernew4team.png" title="Title 3">
-                    <img src="assets/bordernew4team.png" alt="Gallery Image 3"/>
-                    <div class="gallery-caption">
-                      <div class="gallery-icon"><span class="icon-magnifying-glass"></span></div>
-                    </div>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <!-- Additional gallery items can be added here -->
-          </div>
+    <div class="image-container-timeless">
+      <div class="flex-container-timeless">
+        <!-- Flex Item 1 -->
+        <div class="flex-item-timeless">
+          <img src="assets/borderSliderImages/bordernew4team.png" alt="Image Description 1"/>
         </div>
-      </section>
+        <!-- Flex Item 2 -->
+        <div class="flex-item-timeless">
+          <img src="assets/borderSliderImages/bordernew3.png" alt="Image Description 2"/>
+        </div>
+        <!-- Flex Item 3 -->
+        <div class="flex-item-timeless">
+          <img src="assets/borderSliderImages/bordernew2.png" alt="Image Description 3"/>
+        </div>
+      </div>
     </div>
   </div>
 </div>
+
+<!-- Timeless Digital Modal -->
+<div id="modal-timeless" class="modal">
+  <div class="modal-content">
+<!-- Modal Title with bold formatting -->
+<h2 class="modalTitle"><strong>Timeless Digital</strong></h2>
+
+<!-- Description with certain parts in bold -->
+<p class="modalDescription"><strong>Corporate/Business</strong></p>
+<p><strong>Location:</strong> Tijuana/San Diego</p>
+<p><strong>Timeless Digital:</strong> Web Design solo operation based in the city of Tijuana, Mexico. With the use of every resource found online, and a rapid development, this website was deployed in two months.</p>
+<p><strong>Website:</strong> <a href="http://www.timeless-digital.com" target="_blank">www.timeless-digital.com</a></p>    <!-- ... other content ... -->
+    <div class="image-container-timeless">
+      <div class="flex-container-timeless">
+        <!-- Flex Item 1 -->
+        <div class="flex-item-timeless">
+          <img src="assets/timelessSliderImages/full.jpg" alt="Image Description 1"/>
+        </div>
+      
+      </div>
+    </div>
+    <!-- Close button or other content... -->
+  </div>
 
      
         <hr class="divider-d" />
