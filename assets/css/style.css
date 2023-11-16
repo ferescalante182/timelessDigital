@@ -8940,3 +8940,32 @@ img {
     padding: 50px; /* or any other value that fits your design */
   }
 }
+
+#modal-timeless .image-container-timeless .flex-container-timeless {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+#modal-timeless
+  .image-container-timeless
+  .flex-container-timeless
+  .flex-item-timeless {
+  width: 100%;
+  padding: 10px;
+}
+
+#modal-timeless
+  .image-container-timeless
+  .flex-container-timeless
+  .flex-item-timeless
+  img {
+  width: 100%;
+  height: auto;
+}
+
+.bg-yellow {
+  background-color: yellow; /* Set the background color to yellow */
+}
